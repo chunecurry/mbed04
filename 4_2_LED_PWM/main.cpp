@@ -5,10 +5,10 @@ AnalogIn Ain(A0);
 float ADCdata;
 int main(){
   while(1){
-    PWM1.period_ms(500);
+    PWM1.period_ms(2);
     PWM1 = Ain;
     ADCdata = Ain; //send an opening text message
     printf("%f\r\n", ADCdata);
-    ThisThread::sleep_for(100ms);
+    ThisThread::sleep_for(10ms);
   }
 }
